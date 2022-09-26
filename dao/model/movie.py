@@ -4,6 +4,9 @@ from setup_db import db
 
 
 class Movie(db.Model):
+    """
+    Модель фильма
+    """
     __tablename__ = 'movie'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
@@ -18,6 +21,9 @@ class Movie(db.Model):
 
 
 class MovieSchema(Schema):
+    """
+    Схема для сериализации данных фильма
+    """
     id = fields.Int()
     title = fields.Str()
     description = fields.Str()
